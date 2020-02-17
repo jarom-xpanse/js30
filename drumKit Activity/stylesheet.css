@@ -4,12 +4,23 @@ body {
     text-align: center;
 }
 
-.keys {
+body > div {
+    margin-top: 200px;
+}
+
+.key {
     border: 5px solid black;
     padding: 10px;
     display: inline-block;
     background-color: #fff;
     font-size: 2em;
+    transition: all 0.07s;
+}
+
+.playing {
+    border: 2px solid yellowgreen;
+    opacity: 90%;
+    transform: scale(1.1);
 }
 
 kbd {
