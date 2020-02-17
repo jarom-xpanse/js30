@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DrumKit Activity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
+    <!-- <script src="main.js"></script> -->
+
+
+
+</head>
+<body>
+
+    <div class="keys">
+        <div data-key="65" class="key" ></div>
+        <kbd>A</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="83" class="key" ></div>
+        <kbd>S</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="68" class="key" ></div>
+        <kbd>D</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="70" class="key" ></div>
+        <kbd>F</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="71" class="key" ></div>
+        <kbd>G</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="72" class="key" ></div>
+        <kbd>H</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="74" class="key" ></div>
+        <kbd>J</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="75" class="key" ></div>
+        <kbd>K</kbd>
+    </div>
+    <div class="keys">
+        <div data-key="76" class="key" ></div>
+        <kbd>L</kbd>
+    </div>
+
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+
+
+    <script>
+        window.addEventListener('keydown', function(e) {
+        console.log(e.keyCode);
+    });
+
+    </script>
+</body>
+</html>
