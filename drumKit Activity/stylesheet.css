@@ -1,0 +1,22 @@
+body {
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+.keys {
+    border: 5px solid black;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 2em;
+}
+
+kbd {
+    display: block;
+    text-align: center;
+}
+
+.sound {
+    text-transform: uppercase;
+}
