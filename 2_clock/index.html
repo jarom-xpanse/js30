@@ -22,8 +22,51 @@
 
     <script>
     // insert javascript codes here
+    const secondHand = document.querySelector('.second-hand');
+    const minsHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function setDate() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const mins = now.getMinutes();
+        const hour = now.getHours()
+
+        const secondDegrees = ((seconds / 60) * 360) + 90;
+        const minsDegrees = ((mins / 60) * 360 ) + 90;
+        const hourDegrees = ((hour / 12) * 360) + 90;
+
+        // console.log(hour + " " + mins + " " + seconds);
+        
+        secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+        minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+        if(secondDegrees >= (((59 / 60) * 360) + 90)) {
+            removeTransition(); // run if secondHand is in 59th seconds
+        }
+    } 
+
+    function removeTransition() {
+        const transitionValue = [secondHand.style.transition,
+        minsHand.style.transition,
+        hourHand.style.transition
+        ];
+
+        secondHand.style.transition = 'none';
+        minsHand.style.transition = 'none';
+        hourHand.style.transition = 'none';
+
+        setTimeout(()=>{
+            secondHand.style.transition = transitionValue[0];
+            minsHand.style.transition = transitionValue[1];
+            hourHand.style.transition = transitionValue[2];
+            console.log('transiction is now back;')
+        }, 1000)
+        console.log('transition removed')
+    }
     
-    
+    setInterval(setDate, 1000);
     
     
     
