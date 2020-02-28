@@ -1,5 +1,52 @@
+html {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body {
     background-image: url('img/spikes.png');
     background-attachment: fixed;
 }
 
+ol {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+    /* justify-content: space-around; */
+}
+
+li {
+    border: 1px solid black;
+    width: 200px;
+    height: 140px;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+li:hover {
+    border: 1px solid black;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+li a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 5px 5px 5px #ff0000;
+    background: hsla(240, 100%, 50%, 0.4);
+    border-radius: 10px;
+    
+}
+
+h1 {
+    font-size: 1em;
+    padding-top: 1em;
+}
