@@ -12,6 +12,7 @@ function init() {
     var numDisplayed = false;
 
     listItem.forEach((li, index) => {
+        let timer;
         li.addEventListener('mouseover', ()=> {
             if(numDisplayed == true) return;
             numDisplayed = true;
@@ -19,11 +20,27 @@ function init() {
             p.innerHTML = index + 1;
             p.classList.add('numbering');
             li.appendChild(p);
+
+            // Highlight JS activity when hovered for a few seconds
+
+            timer = setTimeout(()=> {
+                li.style.height = '290px';
+            setTimeout(runMasonry, 200);
+            }, 500);
+            
+
         });
         li.addEventListener('mouseleave', ()=> {
             numDisplayed=false;
             let p = li.querySelector('p');
             li.removeChild(p);
+
+            // Unhighlight JS activity
+
+            li.style.height = '140px';
+            setTimeout(runMasonry, 200)
+
+            clearTimeout(timer);
         })
     })
 
